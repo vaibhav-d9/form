@@ -1,0 +1,169 @@
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+
+.container{
+width: 100%;
+margin: 3rem auto 0 auto;
+}
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+text-align:center;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+color:white;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin: 0.5rem auto 0 1rem;
+}
+#description{
+font-style:italic;
+font-weight:200;
+}
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background:teal;
+background-image:url("Galgotias-University-Campus.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+}
+form{
+ background: rgba(27, 27, 50, 0.8);
+width:60%;
+border-radius:10px;
+margin-left:20rem;}
+
+.entries{
+display:block;
+width:90%;
+height:3rem;
+padding:10px;
+border:1px solid #ced4da;
+border-radius:0.5rem;
+margin:1rem;
+}
+
+.entries:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.ir,
+.ic {
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.submit-button{
+display:block;
+width:90%;
+padding:1rem;
+margin:auto;
+background: #37af65;
+cursor:pointer;
+border-radius:10px;
+}
+</style>
+<!--
+___________________________________________________________________________________________________________________________________________________________________
+-->
+
+<div class="container">
+<header class="header">
+<h1 id="title">Galgotias College of Engineering and Technology</h1>
+<p id="description">Gautam Budhh Nagar, Greater Noida</p>
+</header>
+<form id="survey-form">
+<div class="form-group">
+	<label id="name-label" for="name">Name</label>
+	<input class="entries" type="text" id="name" name="name" placeholder="Enter your name"/></input>
+</div>
+<div class="form-group">
+	<label id="email-label" for="email">Email</label>
+	<input class="entries" type="text" id="email" name="email" placeholder="Enter your email"/></input>
+</div>
+<div class="form-group"> 
+	<label id="number-label" for="number">Roll number</label>
+	<input class="entries" type="text" id="number" name="number" placeholder="Enter your RollNumber"/></input>
+</div>
+<div class="form-group">
+<label><p>Select your branch</p></label>
+	<select class="entries" id="dropdown" required>
+	<option disabled selected value>Select branch</option>
+		<option value="eee">Electrical and Electronics Engineering</option>
+		<option value="ee">Electrical Engineering</option>
+		<option value="cs">Computer Science and Engineering/</option>
+		<option value="it">Information Technology</option>
+		<option value="civil">Civil Engineering</option>
+	</select>
+</div>
+<div class="form-group">
+<label><p>Select your year</p></label>
+	<label><input class="ir" type="radio" name="year"/>First year</input></label>	
+	<label><input class="ir" type="radio" name="year"/>Second year</input></label>
+	<label><input class="ir" type="radio" name="year"/>Third year</input></label>
+
+</div>
+<div class="form-group">
+<label><p>You are interested in</p></label>
+	<label><input class= "ic" type="checkbox" name="activities" value="dance"/>Dance</label>	
+	<label><input class="ic" type="checkbox" name="activities" value="music"/>Music</label>
+	<label><input class="ic" type="checkbox" name="activities" value="drama"/>Drama</label>
+	<label><input class="ic" type="checkbox" name="activities" value="art"/>Art</label>
+	<label><input class="ic" type="checkbox" name="activities" value="football"/>Football</label>
+	<label><input class="ic" type="checkbox" name="activities" value="volleyball"/>Volleyball</label>
+	<label><input class="ic" type="checkbox" name="activities" value="cricket"/>Cricket</label>
+	<label><input class="ic" type="checkbox" name="activities" value="achoring"/>Anchoring</label>
+	<label><input class="ic" type="checkbox" name="activities" value="debating"/>Debating</label>
+</div>
+<div class="form-group">
+      <label><p>Any comments or suggestions?</p></label>
+      <textarea
+	style="height:10rem"
+	class="entries"
+        id="comments"
+        name="comment"
+        placeholder="Enter your comment here..."
+      ></textarea>
+    </div>
+<div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+</input>
+</form>
+</div>
